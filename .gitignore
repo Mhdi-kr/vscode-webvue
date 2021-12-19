@@ -1,0 +1,6 @@
+/node_modules
+/packages/client/node_modules
+/packages/extension/node_modules
+/packages/extension/vue-dist
+/packages/client/dist
+/packages/extension/dist
