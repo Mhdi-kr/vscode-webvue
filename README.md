@@ -1,25 +1,47 @@
 # vscode-webvue
 
-vscode webview extension template using vue 3 and vite ⚡
+![static/header.png](static/header.png)
 
-## 🚀 How to use it?
+An easy solution for building visual studio code extensions using vue and vite ecosystem ⚡
 
-The project is build with monorepo structure containing two packages. The first one is the client and the second one is the vscode extension code itself.
+## 🚀 How to use
 
-For running project in development mode use:
+![](/static/helloworld.gif)
+
+### Install dependencies
 
 ```bash
-yarn run watch
+yarn
 ```
 
-after vscode instance opened up use command pallate and then select the `hello world` command
+For running project in development mode use
 
-![](/docs/screenshot.png)
+```bash
+yarn watch
+```
 
-Here you can see your vue project already built and injected using vscode webview API. you can utilize the full functionality of vue such as its amazing reactivity and its available plugins out of the box!
+### Adding more commands
 
-when you start developing on the `/packages/client/` vue application directory, your changes will be watched using nodemon, then rebuilt and be opened inside vscode extension host ready to be used with vscode command pallate!
+Then after VSCode development host opens, use command pallet and select the `hello world` command.
 
-Inside the vue application code, the `vscode` object is globally injected and can be used to send messages to the vscode runtime and perform tasks such as read/writing files, etc.
+To add more commands to your extension, edit the `package.json` located in the `/packages/extension` directory, and use the keys in your `extension.ts` file using `vscode.commands.registerCommand` method.
 
-![](/docs/flow.jpg)
+## 🔧 How it works
+
+The project is built with monorepo structure containing two packages. The first one being the client, and the second being the visual studio code extension program.
+
+when you start developing on the `/packages/client/` vue application directory, your changes will be watched using nodemon, then rebuilt and be opened inside vscode extension host ready to be used with vscode command pallet!
+
+Here you can see your vue project already built and injected using vscode webview API. you can utilize the full functionality of vue such as its amazing reactivity and its available additions (like `vue-router`) out of the box!
+
+Inside the vue application code, the `vscode` object is globally accessible and can be used to send messages to the vscode runtime and perform tasks such as read/writing files, etc.
+
+![](/static/flow.jpg)
+
+## 📄 Blogs
+
+[Developing a VS Code Extension using Vue 3 and WebView Panels API](https://medium.com/@mhdi_kr/developing-a-vs-code-extension-using-vue-3-and-webview-panels-api-536d87ce653a)
+
+## 🤝 Contribution
+
+If you have any questions or recommendations please create a new issue for it, and if you've hacked together any feature or enhancement, a pull request is more than welcome here! 🙏
